@@ -16,7 +16,39 @@ const slot3ThirdSelected = document.getElementById("slot3Third");
 
 const icons = ["🎟️", "🍋", "👑", "⭐", "🎰", "🍀", "💎"];
 
-let combinations = buildCombination([0, 1, 2, 3, 4, 5, 6]);
+let combinations = [
+  [1, 3, 2],
+  [6, 0, 4],
+  [4, 1, 5],
+  [0, 3, 3],
+  [3, 6, 2],
+  [5, 2, 5],
+  [0, 1, 2],
+  [6, 3, 0],
+  [1, 0, 3],
+  [5, 2, 4],
+  [2, 5, 5],
+  [4, 3, 1],
+  [3, 4, 0],
+  [0, 1, 6],
+  [1, 0, 1],
+  [5, 3, 5],
+  [2, 6, 3],
+  [3, 0, 0],
+  [2, 2, 2],
+  [0, 3, 3],
+  [3, 6, 2],
+  [5, 2, 5],
+  [1, 0, 1],
+  [6, 3, 0],
+  [0, 1, 3],
+  [1, 0, 4],
+  [6, 3, 2],
+  [4, 2, 5],
+  [3, 6, 1],
+  [0, 1, 6],
+  [2, 4, 0],
+];
 
 function initSlots() {
   renderItems();
@@ -94,26 +126,6 @@ function createSlotItem(item) {
   slotItem.innerHTML = icons[item];
 
   return slotItem;
-}
-
-/**
- *
- * @param {number[]} slot
- * @param {number[]} items
- * @param {number} combinationSize
- */
-function buildCombination(items) {
-  const combination = [];
-
-  for (let i = 0; i < items.length; i++) {
-    for (let j = 0; j < items.length - 1; j++) {
-      const combined = [items[items.length - (j + 1)], items[j], items[j + 1]];
-
-      combination.push(combined);
-    }
-  }
-
-  return combination;
 }
 
 window.addEventListener("DOMContentLoaded", initSlots);
