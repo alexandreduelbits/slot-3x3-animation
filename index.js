@@ -36,18 +36,6 @@ let combinations = [
   [2, 6, 3],
   [3, 0, 0],
   [2, 2, 2],
-  [0, 3, 3],
-  [3, 6, 2],
-  [5, 2, 5],
-  [1, 0, 1],
-  [6, 3, 0],
-  [0, 1, 3],
-  [1, 0, 4],
-  [6, 3, 2],
-  [4, 2, 5],
-  [3, 6, 1],
-  [0, 1, 6],
-  [2, 4, 0],
 ];
 
 function initSlots() {
@@ -99,9 +87,9 @@ function spinSlots() {
 
     const position = itemSize * (combinations.length - 3);
 
-    scrollTo(slot1, position, 1);
-    scrollTo(slot2, position, 1.25);
-    scrollTo(slot3, position, 1.5);
+    scrollTo(slot1, position, 0.6);
+    scrollTo(slot2, position, 0.8);
+    scrollTo(slot3, position, 1);
   }, 5);
 }
 
